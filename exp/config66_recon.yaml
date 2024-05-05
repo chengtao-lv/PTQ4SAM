@@ -1,0 +1,29 @@
+a_qconfig:
+    quantizer: LSQFakeQuantize
+    observer: AvgMinMaxObserver
+    bit: 6
+    symmetric: False
+    ch_axis: -1
+w_qconfig:
+    quantizer: AdaRoundFakeQuantize
+    observer: MSEObserver
+    bit: 6
+    symmetric: False
+    ch_axis: 0
+calibrate: 32
+recon:
+    batch_size: 1
+    scale_lr: 4.0e-5
+    warm_up: 0.2
+    weight: 0.01
+    iters: 20000
+    b_range: [20, 2]
+    keep_gpu: True
+    round_mode: learned_hard_sigmoid
+    drop_prob: 0.5
+ptq4sam:
+    BIG: True
+    AGQ: True
+    global_num: 128
+    peak_distance: 32
+    peak_height: 0.01

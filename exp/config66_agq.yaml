@@ -1,0 +1,22 @@
+a_qconfig:
+    quantizer: LSQFakeQuantize
+    observer: AvgMinMaxObserver
+    bit: 6
+    symmetric: False
+    ch_axis: -1
+w_qconfig:
+    quantizer: AdaRoundFakeQuantize
+    observer: MSEObserver
+    bit: 6
+    symmetric: False
+    ch_axis: 0
+calibrate: 32
+ptq4sam:
+    BIG: False
+    AGQ: True
+    global_num: 128
+    peak_distance: 32
+    peak_height: 0.01
+    
+    
+
