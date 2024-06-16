@@ -85,6 +85,15 @@ Bimodal distributions mainly occur in the `mask decoder` of SAM-B and SAM-L.
 
 ## Reference
 If you find this repo useful for your research, please consider citing the paper.
+```
+@inproceedings{lv2024ptq4sam,
+  title={PTQ4SAM: Post-Training Quantization for Segment Anything},
+  author={Lv, Chengtao and Chen, Hong and Guo, Jinyang and Ding, Yifu and Liu, Xianglong},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={15941--15951},
+  year={2024}
+}
+```
 
 
 ## Acknowledgments
