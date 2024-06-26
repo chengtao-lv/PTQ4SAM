@@ -70,7 +70,7 @@ Download the pretrain weights (SAM and detectors), put them into the correspondi
 ## Usage
 To perform quantization on models, specify the model configuration and quantization configuration. For example, to perform W6A6 quantization for SAM-B with a YOLO detector, use the following command:
 ```shell
-python ptq4sam/solver/test_quant.py \ 
+python ptq4sam/solver/test_quant.py \
 --config ./projects/configs/yolox/yolo_l-sam-vit-l.py \
 --q_config exp/config66.yaml --quant-encoder
 ```
